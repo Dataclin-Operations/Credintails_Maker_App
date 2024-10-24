@@ -46,7 +46,7 @@ if __name__ == "__main__":
                 if not valid:
                     st.error("Please Enter a vaild Email")
                 else:
-                    st.write(f"""{name} = {{ email = {email}, name = {name} , password = {hashed_passwords} }} """)
+                    st.write(f"""{name} = {{ email = "{email}", name = "{name}" , password = "{hashed_passwords}" }} """)
 
 
 # Mohamed = {email = "muhammetgamal5@gmail.com", name = "Mohamed", password = "$2b$12$xemUqIn9R6N1Dczt00LPv.Z3nmEmTezqJqUND5Rvrpxs9UHrTaWxC"}
