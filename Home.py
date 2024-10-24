@@ -18,7 +18,7 @@ from streamlit_authenticator.utilities.hasher import Hasher
 #     config['pre-authorized']
 # )
 
-# hashed_passwords = Hasher(['Menna@404', 'Yasmin@992', 'Abeer@450', 'Hamza@628','Mohamed@128' ]).generate()
+# hashed_passwords = Hasher(['Menna@404', 'Yasmin@992', 'Abeer@450', 'Hamza@628','Mohamed@128' ]).hash()
 # st.write(hashed_passwords)
 
 
@@ -41,7 +41,7 @@ if __name__ == "__main__":
             ):
                 st.error("Please fill all cells then press submint button")
             else:
-                hashed_passwords = Hasher([password]).generate()[0]
+                hashed_passwords = Hasher([password]).hash()[0]
                 valid = re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email)
                 if not valid:
                     st.error("Please Enter a vaild Email")
